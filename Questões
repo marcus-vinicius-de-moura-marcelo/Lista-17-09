@@ -1,0 +1,160 @@
+/* 1- Crie um programa que imprima a sequência dos 100 próximos números inteiros, seguintes a um
+valor fornecido pela pessoa utilizadora.
+    */
+
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+   
+    Scanner entrada =  new Scanner(System.in);
+    int n;
+    System.out.println("Escolha um número inteiro.");
+    n = entrada.nextInt();
+    
+    for (int i =0; i<100; i++){
+      n = n + 1;
+      System.out.println(i+1 + "°->" + n);
+    }
+    
+      
+    }
+    
+    }
+
+
+/* 2- Escreva um programa em Java que calcule o produto de A (número real) por B (número inteiro),
+ou seja, A*B, por intermédio de adições sucessivas. Tanto A quanto B devem ser fornecidos
+pela pessoa utilizadora do programa.
+*/
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    int numero1;
+    int numero2;
+    int multiplicacao;
+    
+    for (;;){
+    Scanner entrada = new Scanner(System.in);
+    
+    System.out.println("Digite um número inteiro.");
+    numero1 = entrada.nextInt();
+    
+    System.out.println("Digite outro número inteiro.");
+    numero2 = entrada.nextInt();
+    
+    multiplicacao=numero1*numero2+1;
+    
+    while (numero1<multiplicacao){
+      System.out.println(numero1);
+      numero1+=numero2;
+  }
+   }
+  }
+  }
+
+
+/* 3- Na usina de Angra dos Reis, os técnicos analisam a perda de massa de um material radioativo.
+Sabendo-se que este perde 25% de sua massa a cada 30 segundos. Criar um programa que
+calcule iterativamente e imprima o tempo necessário para que a massa deste material se torne
+menor que 0, 10 grama. O programa pode calcular o tempo para várias massas.
+*/
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Integer segundos;
+    Double massaInicial;
+    Double massa;
+    String nome;
+    
+    Scanner entrada = new Scanner(System.in);
+    
+    while(true){
+      System.out.println("Qual o nome da substância?");
+      nome=entrada.next();
+      System.out.println("Digite a massa do elemento, em gramas, ou 0 para sair.");
+      massaInicial=entrada.nextDouble();
+      
+      if(massaInicial==0){
+        break;
+      }
+      massa = massaInicial;
+      segundos = 0;
+      
+      while(massa>=0.1){
+        massa*=0.75;
+        segundos+=30;
+      }
+      System.out.println("São gastos " + segundos + " segundos para " + nome + " ter a massa menor que 0,1 gramas.");
+    }
+    
+  }
+}
+
+
+/* 4- Crie um programa que lê vários números inteiros e positivos e imprima o produto dos números
+ímpares e a soma dos números pares. Observação: O programa será encerrado quando um
+valor negativo for inserido.
+*/
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+  Scanner entrada = new Scanner(System.in); 
+    Integer numero;
+    Integer somaPar = 0;
+    Integer produtoImpar = 1;
+    
+    for (int i=1; i<11; i++){
+     System.out.println("Digite um número inteiro(serão pedidos 10 números no total.)");
+     numero = entrada.nextInt();
+      if(numero<0){
+        break;
+      }else if(numero%2==0){
+        somaPar += numero; 
+      }else{
+        produtoImpar*=numero;
+      }
+    }
+     System.out.println(" A soma dos números pares é igual a " + somaPar);
+     System.out.println(" O produto da multiplicação dos números ímpares é " + produtoImpar);
+        
+  }
+}
+
+
+5) NÃO CONSEGUI FINALIZAR
+/* 5- Faça um algoritmo que receba a idade, altura e peso de 10 pessoas. Calcule e mostre:
+(a) a quantidade de pessoas com idade superior a 50 anos;
+(b) a média das alturas das pessoas com idade entre 10 e 20 anos;
+(c) a porcentagem de pessoas com peso inferior a 40 quilos entre todas as pessoas.
+*/
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+    Integer idade;
+    Integer altura;
+    Integer peso;
+    Integer cinquentamais;
+    
+    for(int i=1; i<11; i++){
+        System.out.println("Idade:");
+        idade=entrada.nextInt();
+        System.out.println("Altura (em centímetros:");
+        altura=entrada.nextInt();
+        System.out.println("Peso (arredondado)");
+        peso=entrada.nextInt();
+      
+      if(idade>50){
+        cinquentamais
+      }
+      }
+    
+  }
+}
